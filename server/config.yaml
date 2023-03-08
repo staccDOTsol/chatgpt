@@ -1,0 +1,18 @@
+# ----- PINECONE CONFIG -----
+PINECONE_API_KEY: "b9376172-5c9b-488d-ab1e-376d6996224e"
+PINECONE_INDEX: "ada-one-namespace" # dimensions: 1536, metric: cosine similarity # dimensions: 1536, metric: cosine similarity
+PINECONE_ENV: "us-east1-gcp"
+
+# ----- SERVER PORT ----
+SERVER_PORT: "8080"
+
+# ---- OPENAI CONFIG -----
+EMBEDDINGS_MODEL: "text-similarity-davinci-001"
+GENERATIVE_MODEL: "gpt-3.5-turbo"
+EMBEDDING_DIMENSIONS: 1536
+TEXT_EMBEDDING_CHUNK_SIZE: 4660
+# This is the minimum cosine similarity score that a file must have with the search query to be considered relevant
+# This is an arbitrary value, and you should vary/ remove this depending on the diversity of your dataset
+COSINE_SIM_THRESHOLD: 0.666
+MAX_TEXTS_TO_EMBED_BATCH_SIZE: 200
+MAX_PINECONE_VECTORS_TO_UPSERT_PATCH_SIZE: 500
